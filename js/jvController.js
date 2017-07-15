@@ -16,9 +16,12 @@ function paint(chartDiv, type, data) {
             dataTable: data.dataTableAlign,
             dataTableKeys: data.dataTableKeys,
             colors: data.color
+        },
+        callbacks: {
+            defaultMode: {}
         }
     });
-    chart.draw.showToolTip = false;
+    chart.showTooltip = true;
 }
 
 const COLOR = ['#0c4ba2', '#15b994', '#F41C3E', '#e8c316', '#8d2ad9', '#ee8620', '#08254d', '#0d6954', '#730911', '#a78c0e', '#3f0d66', '#984f08'];
@@ -100,7 +103,10 @@ const DATA2 = {
 let chartDiv = d3.select('#chart-viz');
 let chartDiv2 = d3.select('#chart-viz2');
 
+window.setTimeout(()=>{
 paintAll();
+},100);
+
 
 function paintAll() {
     paint(chartDiv, 'bar', DATA);

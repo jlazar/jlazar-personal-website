@@ -1,0 +1,348 @@
+.edit-div {
+    z-index: 6;
+    display: none;
+    width: 220px;
+    height: auto;
+}
+
+.jv-inline {
+    display: inline-block;
+}
+
+.jv-pointer {
+    cursor: pointer;
+}
+
+.jv-center {
+    text-align: center;
+}
+
+.jv-full-width {
+    width: 100%;
+}
+
+.jv-pull-left {
+    float: left;
+}
+
+.jv-pull-right {
+    float: right;
+}
+
+.jv-tip-side-margins {
+    margin: 0 10px 0 10px;
+}
+
+.jv-top-margin {
+    margin-top: 5px;
+}
+
+.jv-button {
+    color: #2E3133;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.09);
+    background-color: white;
+    border-radius: 2px;
+    border: 1px solid #B7BFC5;
+    outline: none;
+    padding: 3px 8px;
+    font-size: .9em;
+}
+
+.jv-button.jv-button-green {
+    color: white;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    background: #15B994;
+    border: 1px solid #15B994;
+}
+
+.d3-tooltip-circle {
+    width: 10px;
+    height: 10px;
+}
+
+#exitEditMode{
+    margin-top: -5px;
+}
+
+.jv-edit-mode-input {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.semoss-d3-tip {
+    z-index: 10000;
+    margin: 0;
+    padding: 5px;
+    min-width: 200px;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(122,122,122,0.6);
+    color: #000000;
+}
+
+.semoss-d3_v3-tip {
+    z-index: 10000;
+    margin: 0;
+    padding: 5px;
+    min-width: 200px;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(122,122,122,0.6);
+    color: #000000;
+}
+
+.editable-pie {
+    opacity: 1;
+    transition: .2s;
+}
+
+.pie-container:hover .editable-pie {
+    opacity: 1;
+    transform: scale(1.05, 1.05);
+    transition: .2s;
+}
+
+.pie-container:hover .editable-pie:not(:hover) {
+    opacity: 0.7;
+    transform: scale(1, 1);
+    transition: .2s;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.semoss-d3-tip:after {
+    display: none;
+}
+
+.chart-div {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
+
+.commentbox-readonly {
+    z-index: 6;
+    pointer-events: none;
+}
+
+.commentbox-annotate {
+    outline: none;
+    border: none;
+}
+
+.commentbox {
+    width: 205px;
+    height: auto;
+    background-color: #e6e6e6;
+    color: #000000;
+    padding: 5px;
+    margin: 0px;
+    z-index: 6;
+}
+
+.commentbox-edit {
+    width: 205px;
+    height: auto;
+    background-color: #e6e6e6;
+    color: #000000;
+    padding: 5px;
+    margin: 0px;
+    z-index: 6;
+}
+
+.commentbox-close{
+    position: absolute;
+    padding: 3px 8px;
+    font-size: .9em;
+    outline: none;
+    top: 0;
+    right: 0;
+    border: 0 none;
+    background: transparent;
+}
+
+.commentbox-submit{
+    float: right;
+}
+
+.tip-line {
+    pointer-events: none;
+}
+
+.topbar-button.font {
+    font-size: 1.1em;
+    padding: 3px 4px 3px 4px;
+}
+
+.topbar-button {
+    font-size: 1.3em;
+    padding: 3px 5px 3px 5px;
+}
+
+.comment-textarea {
+    max-width: 190px;
+    outline: none;
+}
+
+.brusharea {
+    visibility: visible !important;
+}
+
+.brusharea .background {
+    fill: blue;
+    visibility: visible;
+    z-index: 10;
+}
+
+.brusharea .extent {
+    visibility: visible;
+    fill: #E6E6E6;
+    z-index: 11;
+    fill-opacity: .7;
+    shape-rendering: crispEdges;
+    stroke: #E6E6E6;
+}
+
+.brusharea .resize {
+    visibility: visible !important;
+    fill: #00E753;
+    z-index: 12;
+}
+
+.jv-tooltip {
+    z-index: 10000;
+    /*opacity: .6;*/
+    /*background: rgba(255,255,255,0.95);*/
+    background: #f2f2f2;
+    width: auto;
+    max-width: 50%;
+    /*border: 1px solid black;*/
+    position: absolute;
+    color: black;
+}
+
+
+/*---------------------------------VIZ SPECIFIC------------------------------------------------------*/
+/*Circle Packing CSS*/
+.node {
+    cursor: pointer;
+}
+
+.node:hover {
+    stroke: #000;
+    stroke-width: 1.5px;
+}
+
+.node:hover text{
+    stroke: none;
+    stroke-width: 0;
+}
+
+.node--leaf {
+    fill: transparent;
+}
+
+.label {
+    font-size: .75em;
+    text-anchor: middle;
+}
+
+.label,
+.node--root,
+.node--leaf {
+    pointer-events: none;
+}
+
+.node rect {
+    cursor: move;
+    fill-opacity: .9;
+    shape-rendering: crispEdges;
+}
+
+.node text {
+    pointer-events: none;
+}
+
+.sankey-link {
+    fill: none;
+    stroke: #000;
+    stroke-opacity: .2;
+}
+
+.sankey-link:hover {
+    stroke-opacity: .5;
+}
+
+.chord {
+  fill-opacity: .67;
+}
+
+text.text-highlight {
+    opacity: .2;
+}
+
+.rect-highlight {
+    opacity: .2;
+}
+
+.rect-border {
+    stroke: black;
+    stroke-width: 2px;
+}
+
+.line-threshold {
+    stroke: url(#line-gradient);
+}
+
+.area-threshold {
+    fill: url(#line-gradient);
+}
+
+.heatLegend {
+	height: 100%;
+    position: fixed;
+    top: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.jvDoodle-container {
+    position: absolute;
+    right: 49px;
+    top: 20px;
+}
+
+.jvDoodle-container ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+#jvDoodle-modes {
+    cursor: pointer;
+}
+
+#jvDoodle-canvas {
+    position: absolute;
+    left: 0;
+    background: rgba(0,0,0,0);
+}
+
+#jvDoodle-modes btn {
+    opacity: .5
+}
+
+#jvDoodle-modes btn:hover {
+    opacity: 1;
+}
+
+#jvDoodle-modes .jvDoodle-active {
+    opacity: 1;
+}
+
+#jvDoodle-modes #jvDoodle-color {
+    background: none;
+    border: none;
+    width: 20px;
+    position: relative;
+    right: 3px;
+    cursor: pointer;
+}
